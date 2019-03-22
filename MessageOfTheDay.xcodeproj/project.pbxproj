@@ -12,6 +12,10 @@
 		6651762C22445CED000FDD22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6651762A22445CED000FDD22 /* Main.storyboard */; };
 		6651762E22445CEE000FDD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6651762D22445CEE000FDD22 /* Assets.xcassets */; };
 		6651763122445CEE000FDD22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6651762F22445CEE000FDD22 /* LaunchScreen.storyboard */; };
+		6651763D22445D60000FDD22 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6651763C22445D60000FDD22 /* Messages.swift */; };
+		6651763F22445E86000FDD22 /* MessagesTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6651763E22445E86000FDD22 /* MessagesTableController.swift */; };
+		6651764122445F51000FDD22 /* MessagesTableController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6651764022445F51000FDD22 /* MessagesTableController.storyboard */; };
+		665176432244614C000FDD22 /* MessagesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665176422244614C000FDD22 /* MessagesTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		6651762D22445CEE000FDD22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6651763022445CEE000FDD22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6651763222445CEE000FDD22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6651763C22445D60000FDD22 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		6651763E22445E86000FDD22 /* MessagesTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableController.swift; sourceTree = "<group>"; };
+		6651764022445F51000FDD22 /* MessagesTableController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessagesTableController.storyboard; sourceTree = "<group>"; };
+		665176422244614C000FDD22 /* MessagesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				6651762522445CED000FDD22 /* MessageOfTheDay */,
+				6651762D22445CEE000FDD22 /* Assets.xcassets */,
+				6651763822445D0A000FDD22 /* Resourcess */,
 				6651762422445CED000FDD22 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,14 +64,48 @@
 		6651762522445CED000FDD22 /* MessageOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
-				6651762622445CED000FDD22 /* AppDelegate.swift */,
-				6651762822445CED000FDD22 /* ViewController.swift */,
-				6651762A22445CED000FDD22 /* Main.storyboard */,
-				6651762D22445CEE000FDD22 /* Assets.xcassets */,
-				6651762F22445CEE000FDD22 /* LaunchScreen.storyboard */,
-				6651763222445CEE000FDD22 /* Info.plist */,
+				6651763922445D37000FDD22 /* Models */,
+				6651763A22445D3C000FDD22 /* Views */,
+				6651763B22445D43000FDD22 /* Controllers */,
 			);
 			path = MessageOfTheDay;
+			sourceTree = "<group>";
+		};
+		6651763822445D0A000FDD22 /* Resourcess */ = {
+			isa = PBXGroup;
+			children = (
+				6651762F22445CEE000FDD22 /* LaunchScreen.storyboard */,
+				6651762622445CED000FDD22 /* AppDelegate.swift */,
+				6651763222445CEE000FDD22 /* Info.plist */,
+			);
+			path = Resourcess;
+			sourceTree = "<group>";
+		};
+		6651763922445D37000FDD22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6651763C22445D60000FDD22 /* Messages.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6651763A22445D3C000FDD22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6651762A22445CED000FDD22 /* Main.storyboard */,
+				6651764022445F51000FDD22 /* MessagesTableController.storyboard */,
+				665176422244614C000FDD22 /* MessagesTableCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6651763B22445D43000FDD22 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6651762822445CED000FDD22 /* ViewController.swift */,
+				6651763E22445E86000FDD22 /* MessagesTableController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6651763122445CEE000FDD22 /* LaunchScreen.storyboard in Resources */,
+				6651764122445F51000FDD22 /* MessagesTableController.storyboard in Resources */,
 				6651762E22445CEE000FDD22 /* Assets.xcassets in Resources */,
 				6651762C22445CED000FDD22 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6651763F22445E86000FDD22 /* MessagesTableController.swift in Sources */,
 				6651762922445CED000FDD22 /* ViewController.swift in Sources */,
+				6651763D22445D60000FDD22 /* Messages.swift in Sources */,
 				6651762722445CED000FDD22 /* AppDelegate.swift in Sources */,
+				665176432244614C000FDD22 /* MessagesTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +331,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MessageOfTheDay/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resourcess/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.derbs.MessageOfTheDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +349,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MessageOfTheDay/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Resourcess/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.derbs.MessageOfTheDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

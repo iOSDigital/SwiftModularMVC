@@ -1,0 +1,30 @@
+//
+//  ViewController.swift
+//  MessageOfTheDay
+//
+//  Created by Paul Derbyshire on 21/03/2019.
+//  Copyright © 2019 DERBS.CO. All rights reserved.
+//
+
+import UIKit
+
+
+
+class ViewController: UIViewController {
+	
+	let messagesArray = Message.messages()
+	
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
+	
+	
+	@IBAction func openMessageController(_ sender: AnyObject) {
+		let controller = MessagesTableController.controllerWithMessages(self.messagesArray)
+		self.navigationController?.pushViewController(controller, animated: true)
+	}
+
+
+}
+
