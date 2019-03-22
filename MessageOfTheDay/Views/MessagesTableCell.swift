@@ -2,7 +2,6 @@
 //  MessagesTableCell.swift
 //  MessageOfTheDay
 //
-//  Created by Paul Derbyshire on 22/03/2019.
 //  Copyright © 2019 DERBS.CO. All rights reserved.
 //
 
@@ -13,7 +12,7 @@ class MessagesTableCell: UITableViewCell {
 	@IBOutlet var labelMessage: UILabel?
 	@IBOutlet var labelCategory: UILabel?
 
-	var messageItem: MessageItem? {
+	var message: Message? {
 		didSet {
 			didSet()
 		}
@@ -21,8 +20,8 @@ class MessagesTableCell: UITableViewCell {
 	
 	
 	private func didSet() {
-		labelMessage?.text = messageItem?.message
-		labelCategory?.text = messageItem?.category
+		labelMessage?.text = message?.message
+		labelCategory?.text = message?.category
 	}
 	
 	

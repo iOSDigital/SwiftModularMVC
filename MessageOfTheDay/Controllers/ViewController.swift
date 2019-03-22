@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  MessageOfTheDay
 //
-//  Created by Paul Derbyshire on 21/03/2019.
 //  Copyright © 2019 DERBS.CO. All rights reserved.
 //
 

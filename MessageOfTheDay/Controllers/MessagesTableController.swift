@@ -2,7 +2,6 @@
 //  MessagesTableController.swift
 //  MessageOfTheDay
 //
-//  Created by Paul Derbyshire on 22/03/2019.
 //  Copyright © 2019 DERBS.CO. All rights reserved.
 //
 
@@ -10,11 +9,12 @@ import UIKit
 
 class MessagesTableController: UITableViewController {
 	
-	private var messagesArray: Array<MessageItem> = []
+	private var messagesArray: Array<Message> = []
 	
 	
 	
-	public class func controllerWithMessages(_ messages: Array<MessageItem>) -> MessagesTableController {
+	
+	public class func controllerWithMessages(_ messages: Array<Message>) -> MessagesTableController {
 		let controller = UIStoryboard.init(name: "MessagesTableController", bundle: nil).instantiateInitialViewController() as! MessagesTableController
 		controller.messagesArray = messages
 		return controller
@@ -22,12 +22,12 @@ class MessagesTableController: UITableViewController {
 	
 	
 	// Change the message on the 5th item
-//	@IBAction func buttonPressed(_ sender: AnyObject) {
-//		var messageItem = messagesArray[4]
-//		messageItem.message = "I changed the message!"
-//		guard let cell = self.tableView.cellForRow(at: IndexPath(row: 4, section: 0)) as? MessagesTableCell else { return }
-//		cell.messageItem = messageItem
-//	}
+	// I'm emulating a change in the data in the background
+	// If you listened to a store, like CoreData or Realm, the table would update without a single line of code...
+	@IBAction func buttonPressed(_ sender: AnyObject) {
+		messagesArray[4].message = "I changed the message!"
+		tableView.reloadRows(at: [IndexPath(row: 4, section: 0)], with: .automatic)
+	}
 	
 	
     // MARK: - Table view data source
@@ -44,7 +44,7 @@ class MessagesTableController: UITableViewController {
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessagesTableCell
-		cell.messageItem = messagesArray[indexPath.row]
+		cell.message = messagesArray[indexPath.row]
         return cell
     }
 	

@@ -2,26 +2,31 @@
 //  MyDataSource.swift
 //  MessageOfTheDay
 //
-//  Created by Paul Derbyshire on 22/03/2019.
 //  Copyright © 2019 DERBS.CO. All rights reserved.
 //
 
 import Foundation
 
 
-struct MessageItem {
-	var message: String?
-	var category: String?
-}
-
-
 class Message {
 	
+	// Could be a struct...
+	var message: String?
+	var category: String?
 	
-	class func messages() -> Array<MessageItem> {
-		var dataArray: Array <MessageItem> = []
+	init(message: String, category: String) {
+		self.message = message
+		self.category = category
+	}
+	
+	
+	
+	
+	
+	class func messages() -> Array<Message> {
+		var dataArray: Array <Message> = []
 		for index in 1...50 {
-			let item = MessageItem(message: "Hello world \(index)" , category: "Category \(index)")
+			let item = Message(message: "Hello world \(index)" , category: "Category \(index)")
 			dataArray.append(item)
 		}
 		return dataArray
@@ -29,7 +34,7 @@ class Message {
 	
 	
 	
-	class func messagesInCategory(category: String) -> Array<MessageItem> {
+	class func messagesInCategory(category: String) -> Array<Message> {
 		return self.messages().filter { (message) -> Bool in
 			return message.category == category
 		}
